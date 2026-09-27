@@ -1,0 +1,623 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.party-hero {
+
+    min-height: 90vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding:
+        0 8% 90px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(243,138,170,0.13),
+            transparent 30%
+        );
+
+}
+
+
+.party-hero::after {
+
+    content: "04";
+
+    position: absolute;
+
+    right: 5%;
+
+    top: 45%;
+
+    transform: translateY(-50%);
+
+    font-family: var(--serif);
+
+    font-size: 32vw;
+
+    color: rgba(255,255,255,0.025);
+
+}
+
+
+.party-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 950px;
+
+}
+
+
+.party-hero h1 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(65px, 10vw, 130px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    letter-spacing: -5px;
+
+}
+
+
+.party-hero h1 span {
+
+    color: var(--pink);
+
+    font-style: italic;
+
+}
+
+
+.party-hero-content > p:last-child {
+
+    max-width: 500px;
+
+    color: #8f8b92;
+
+    line-height: 1.8;
+
+    margin-top: 35px;
+
+}
+
+
+.party-stamp {
+
+    position: absolute;
+
+    right: 10%;
+
+    bottom: 100px;
+
+    z-index: 3;
+
+    padding: 18px;
+
+    border: 1px solid
+        rgba(243,138,170,0.45);
+
+    color: var(--pink);
+
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.2em;
+
+    text-align: center;
+
+    transform: rotate(5deg);
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.party-intro {
+
+    padding: 170px 20px;
+
+    text-align: center;
+
+}
+
+
+.party-intro h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+}
+
+
+.party-intro h2 span {
+
+    display: block;
+
+    color: var(--purple);
+
+    font-style: italic;
+
+}
+
+
+.party-intro > p:not(.section-kicker) {
+
+    color: #77737b;
+
+    margin-top: 25px;
+
+}
+
+
+.big-question {
+
+    margin-top: 80px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(30px, 5vw, 60px);
+
+    color: var(--white);
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.party-form-section {
+
+    padding:
+        20px 8% 170px;
+
+    background: var(--black-soft);
+
+}
+
+
+#partyForm {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+}
+
+
+.party-question {
+
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 40px;
+
+    padding:
+        60px 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.question-number {
+
+    color: #4e4a52;
+
+    font-family: var(--serif);
+
+    font-size: 28px;
+
+}
+
+
+.question-content > span {
+
+    color: #625e66;
+
+    font-size: 8px;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.question-content h3 {
+
+    max-width: 700px;
+
+    margin-top: 15px;
+
+    font-family: var(--serif);
+
+    font-size: clamp(35px, 5vw, 58px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+}
+
+
+.options {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+
+}
+
+
+.options label {
+
+    min-height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    border: 1px solid var(--border);
+
+    color: #8f8b92;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+}
+
+
+.options label:hover {
+
+    color: white;
+
+    border-color:
+        rgba(243,138,170,0.45);
+
+}
+
+
+.options input {
+
+    accent-color: var(--pink);
+
+}
+
+
+.options label:has(input:checked) {
+
+    color: white;
+
+    border-color: var(--pink);
+
+    background:
+        rgba(243,138,170,0.06);
+
+}
+
+
+.submit-party {
+
+    margin:
+        70px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 17px 23px;
+
+    border: 1px solid var(--pink);
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    letter-spacing: 0.15em;
+
+    transition: 0.3s ease;
+
+}
+
+
+.submit-party span {
+
+    color: var(--pink);
+
+    font-size: 18px;
+
+}
+
+
+.submit-party:hover {
+
+    background: var(--pink);
+
+    color: var(--black);
+
+}
+
+
+/* =========================================================
+   RESULT
+========================================================= */
+
+.party-result {
+
+    max-width: 850px;
+
+    margin:
+        100px auto 0;
+
+    padding:
+        80px 30px;
+
+    text-align: center;
+
+    display: none;
+
+    border-top: 1px solid var(--pink);
+
+    border-bottom: 1px solid var(--pink);
+
+}
+
+
+.party-result.show {
+
+    display: block;
+
+}
+
+
+.result-symbol {
+
+    color: var(--pink);
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.party-result h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+}
+
+
+.party-result h2 span {
+
+    display: block;
+
+    color: var(--purple);
+
+    font-style: italic;
+
+}
+
+
+.party-result > p:not(.section-kicker) {
+
+    max-width: 550px;
+
+    margin: 30px auto;
+
+    color: #858188;
+
+    line-height: 1.8;
+
+}
+
+
+.result-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    border: 1px solid
+        rgba(100,210,160,0.25);
+
+    color: #7acba8;
+
+    font-size: 8px;
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.result-status span {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #6ed09e;
+
+}
+
+
+.change-button {
+
+    display: block;
+
+    margin: 25px auto 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #656169;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+}
+
+
+.change-button:hover {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   END
+========================================================= */
+
+.party-ending {
+
+    padding: 190px 20px;
+
+    text-align: center;
+
+}
+
+
+.party-ending h2 {
+
+    font-family: var(--serif);
+
+    font-size: clamp(50px, 7vw, 95px);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+}
+
+
+.party-ending h2 span {
+
+    display: block;
+
+    color: var(--pink);
+
+    font-style: italic;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .party-hero {
+
+        min-height: 80vh;
+
+        padding:
+            120px 22px 70px;
+
+    }
+
+
+    .party-stamp {
+
+        display: none;
+
+    }
+
+
+    .party-intro {
+
+        padding:
+            120px 22px;
+
+    }
+
+
+    .party-form-section {
+
+        padding:
+            20px 22px 110px;
+
+    }
+
+
+    .party-question {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding:
+            45px 0;
+
+    }
+
+
+    .options {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .submit-party {
+
+        margin-left: 0;
+
+    }
+
+}

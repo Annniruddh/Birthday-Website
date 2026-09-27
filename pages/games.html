@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bestie Arcade 🎮</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/games.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="../index.html" class="brand">
+        <span class="brand-symbol">✦</span>
+        <span>for you</span>
+    </a>
+
+    <nav class="desktop-nav">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <a href="memories.html">
+            Memories
+        </a>
+
+        <a href="games.html" class="active">
+            Games
+        </a>
+
+        <a href="party.html">
+            Party?
+        </a>
+
+    </nav>
+
+    <button
+        class="music-button"
+        id="musicButton"
+    >
+        ♫
+    </button>
+
+    <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+    >
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-menu-inner">
+
+        <p>A LITTLE ADVENTURE</p>
+
+        <a href="../index.html">
+            Home
+            <span>01</span>
+        </a>
+
+        <a href="memories.html">
+            Our Memories
+            <span>02</span>
+        </a>
+
+        <a href="games.html">
+            Bestie Arcade
+            <span>03</span>
+        </a>
+
+        <a href="party.html">
+            The Important Question
+            <span>04</span>
+        </a>
+
+    </div>
+
+</div>
+
+
+<main>
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="games-hero">
+
+        <div class="games-hero-content">
+
+            <p class="section-kicker reveal">
+                03 / BESTIE ARCADE
+            </p>
+
+            <h1 class="reveal">
+                Think you know
+                <br>
+                <span>everything?</span>
+            </h1>
+
+            <p class="reveal">
+                Three highly scientific tests
+                of friendship.
+                The results may be legally questionable.
+            </p>
+
+        </div>
+
+        <div class="arcade-score">
+
+            <span>YOUR SCORE</span>
+
+            <strong id="totalScore">
+                000
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         GAME SELECT
+    ====================================== -->
+
+    <section class="arcade-section">
+
+        <div class="arcade-heading">
+
+            <p class="section-kicker">
+                CHOOSE YOUR WEAPON
+            </p>
+
+            <h2>
+                Pick a game.
+                <span>Good luck.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="game-selector">
+
+            <button
+                class="game-tab active"
+                data-game="quiz"
+            >
+
+                <small>
+                    GAME 01
+                </small>
+
+                <strong>
+                    Bestie
+                    <em>Quiz</em>
+                </strong>
+
+                <span>
+                    🧠
+                </span>
+
+            </button>
+
+
+            <button
+                class="game-tab"
+                data-game="memory"
+            >
+
+                <small>
+                    GAME 02
+                </small>
+
+                <strong>
+                    Memory
+                    <em>Match</em>
+                </strong>
+
+                <span>
+                    🃏
+                </span>
+
+            </button>
+
+
+            <button
+                class="game-tab"
+                data-game="cake"
+            >
+
+                <small>
+                    GAME 03
+                </small>
+
+                <strong>
+                    Cake
+                    <em>Catcher</em>
+                </strong>
+
+                <span>
+                    🎂
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================
+             QUIZ
+        ================================== -->
+
+        <div
+            class="game-panel active"
+            id="quizGame"
+        >
+
+            <div class="game-panel-top">
+
+                <span>
+                    BESTIE KNOWLEDGE TEST
+                </span>
+
+                <strong id="quizProgress">
+                    01 / 05
+                </strong>
+
+            </div>
+
+            <h2 id="quizQuestion">
+                Loading...
+            </h2>
+
+            <div
+                class="quiz-options"
+                id="quizOptions"
+            ></div>
+
+            <p
+                class="game-feedback"
+                id="quizFeedback"
+            ></p>
+
+        </div>
+
+
+        <!-- =================================
+             MEMORY
+        ================================== -->
+
+        <div
+            class="game-panel"
+            id="memoryGame"
+        >
+
+            <div class="game-panel-top">
+
+                <span>
+                    MEMORY MATCH
+                </span>
+
+                <strong id="memoryScore">
+                    00 / 03
+                </strong>
+
+            </div>
+
+            <h2>
+                Find the matching memories.
+            </h2>
+
+            <div
+                class="memory-board"
+                id="memoryBoard"
+            ></div>
+
+            <p
+                class="game-feedback"
+                id="memoryFeedback"
+            >
+                Find all three pairs.
+            </p>
+
+        </div>
+
+
+        <!-- =================================
+             CAKE
+        ================================== -->
+
+        <div
+            class="game-panel"
+            id="cakeGame"
+        >
+
+            <div class="game-panel-top">
+
+                <span>
+                    CAKE CATCHER
+                </span>
+
+                <strong>
+                    SCORE:
+                    <span id="cakeScore">
+                        00
+                    </span>
+                </strong>
+
+            </div>
+
+            <h2>
+                You know what to do.
+                <span>Catch cake.</span>
+            </h2>
+
+            <div class="cake-game-area">
+
+                <div
+                    class="cake-object"
+                    id="cakeDisplay"
+                >
+                    🎂
+                </div>
+
+                <button
+                    class="cake-button"
+                    id="cakeButton"
+                >
+                    CATCH IT
+                </button>
+
+            </div>
+
+            <p
+                class="game-feedback"
+                id="cakeFeedback"
+            >
+                Catch five cakes to win.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         SCORE CARD
+    ====================================== -->
+
+    <section class="score-section">
+
+        <div class="score-card">
+
+            <p class="section-kicker">
+                CURRENT STATUS
+            </p>
+
+            <div
+                class="big-score"
+                id="bigScore"
+            >
+                000
+            </div>
+
+            <h2 id="scoreTitle">
+                Rookie Bestie
+            </h2>
+
+            <p id="scoreMessage">
+                The friendship assessment has begun.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         NEXT
+    ====================================== -->
+
+    <section class="arcade-ending">
+
+        <p class="section-kicker">
+            YOU SURVIVED
+        </p>
+
+        <h2>
+            Now for the
+            <span>important question.</span>
+        </h2>
+
+        <a
+            href="party.html"
+            class="hero-button"
+        >
+            Proceed to party negotiations →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        ✦ chapter three
+    </div>
+
+    <div>
+        bestie arcade 🎮
+    </div>
+
+</footer>
+
+
+<audio
+    id="birthdayMusic"
+    loop
+>
+    <source
+        src="/assests/music/birthday-song-web.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<script src="../js/main.js"></script>
+<script src="../js/games.js"></script>
+
+</body>
+</html>
